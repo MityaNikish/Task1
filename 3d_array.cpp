@@ -63,8 +63,8 @@ void array3D()
                     temp[i][j][k] = D * tau * (part1 + part2 + part3) + data[i][j][k];
                 }
             }
-        }
-        copy(data, temp);
+        }        
+        memcpy(&data[0][0][0], &temp[0][0][0], I* J* K * sizeof(double));
     }
 
     write_file(data);

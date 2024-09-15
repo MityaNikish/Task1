@@ -63,7 +63,7 @@ void array1D()
                 }
             }
         }
-        copy(data, temp);
+        memcpy(&data[0], &temp[0], I * J * K * sizeof(double));
     }
 
     write_file(data);
